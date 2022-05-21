@@ -24,6 +24,8 @@ Usamos o telegraf para fazer a conexão entre o mosquitto, influxdb e o grafana.
 O mosquitto foi utlizado para criar um broker, e também criar um subscriber, onde ele se inscreveu no topico criado no firmware, e o firmware foi o publisher, então
 todos as informações passadas para o mosquitto, eram passadas para o influxdb que é um banco de dados, que por fim o grafana, pegava as informações do banco de dados, para fazer os gráficos.
 
+Tela das conexões:
+
 ![](https://github.com/JoaoVictorT/Fluxo-de-Pessoas/blob/main/telegraf.png)
 
 
