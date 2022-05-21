@@ -17,4 +17,13 @@ O funcionamento dele seria, dois lasers estão iluminando os ldrs, ao momento qu
 Os dois lasers servem para identificarmos se a pessoa esta saindo ou entrando, e depois de identificar, o outro laser atuará como um verificador para ver se realmente, a pessoa saiu ou entrou.
 
 
+Para podermos enviar informações criamos uma máquina virtual na azure, em unbuntu, nele instalamos o telefrag, mosquitto, influxdb e o grafana.
+
+Usamos o telegraf para fazer a conexão entre o mosquitto, influxdb e o grafana.
+
+O mosquitto foi utlizado para criar um broker, e também criar um subscriber, onde ele se inscreveu no topico criado no firmware, e o firmware foi o publisher, então
+todos as informações passadas para o mosquitto, eram passadas para o influxdb que é um banco de dados, que por fim o grafana, pegava as informações do banco de dados, para fazer os gráficos.
+
+![](https://github.com/JoaoVictorT/Fluxo-de-Pessoas/blob/main/telegraf.png)
+
 
